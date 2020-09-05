@@ -1,0 +1,93 @@
+ <article>
+    <fieldset>
+    <h2 style="color:black; text-align:center; font:verdana; font-  
+     size:100%"><b><u>Pay Now</u></b></h2>
+        <br>
+        <br>
+        <p>Please select a method of payment below :</p>
+        <br>
+        <form>
+         <label><input value="1" type="radio" name="formselector" 
+    onclick="displayForm(this)">Via Credit Card</label>
+            <br> 
+            <label><input value="2" type="radio" name="formselector" 
+       onclick="displayForm(this)">Via Paypal</label>   
+        </form>
+
+        <form style="visibility:hidden" id="ccform"><label>Enter your credit 
+      card details :</label>
+            <br>
+            <br>
+        <dd><p>Credit Card Name : <input type="text" id="ccname" 
+       name="ccname" value="$ccname"></p>
+                <p>Credit Card Type : <select name="cctype" required>
+                <option value="Visa">Visa</option>
+                <option value="Mastercard">Mastercard</option>
+                <option value="American Express">American Express</option>
+                <option value="Discover">Discover</option>
+                <option value="Diners Club">Diners Club</option>
+                <option value="Maestro">Maestro</option>
+                <option value="Verified By Visa">Verified By Visa</option>
+                <option value="Visa Electron">Visa Electron</option>
+                </select>
+
+       <p>Credit Card Number : <input type="text" minlength="16" 
+      id="ccnumber" name="ccnumber" value="$ccnumber"></p>
+                <p>Credit Expiry Date : Month : <select 
+          name="ccexpdatemonth" required>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                </select>
+                <span>Year : <select name="ccexpdateyear" required>
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+                </select></span>
+        <p>Credit Card CVC : <input type="text" minlength="3" id="cccvc" 
+       name="cccvc" value="$cccvc"></p>
+            </dd>   
+            </form>
+            <form style="visibility:hidden" id="paypalform"><label>Enter 
+        your Paypal Details</label>
+            <br>
+            <br>
+            <dd>Paypal Address : <input type="text" id="paypal" 
+       name="paypal" value="$paypal"></dd>
+            </form> 
+
+                    <br>
+        <div id="float_right">
+        <input type="submit" name="submit3" value="Pay Now">
+        </div>
+    </fieldset>
+    </article> 
+    <script type="text/javascript"> 
+        function displayForm(c){ 
+            if(c.value == "1"){ 
+
+     document.getElementById("ccform").style.visibility='visible'; 
+     document.getElementById("paypalform").style.visibility='hidden'; 
+            } 
+            else if(c.value =="2"){ 
+                document.getElementById("ccform").style.visibility='hidden'; 
+
+      document.getElementById("paypalform").style.visibility='visible'; 
+            } 
+            else{ 
+            } 
+         }         
+    </script>   

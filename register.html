@@ -1,0 +1,207 @@
+<html>
+<head>
+    <title>Register | Jai Kisan</title>
+    <style>
+    	.container{
+    		width: 100%;
+    		background-color: #3c8dbc;
+    		padding: 1px;
+		}
+		.cont{
+			width: 100%;
+			background-color: #AEDF22;
+			padding: 1px;
+		}
+		.button {
+  background-color: #EB8112; 
+  border: none;
+  color: white;
+  padding: 2px 4px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer; }
+		footer{
+			background-color: black;
+			border-width: 100%;
+			height: 50px;
+			color: white;
+			padding: 1px;
+		}
+     </style>
+     <script type="text/javascript">
+     	function myvalidate(){
+            var user=document.getElementById('name1').value;
+     		//var user=document.forms["myform"]["name1"].value;
+     		var pass=document.forms["myform"]["pass"].value;
+     		var phone=document.forms["myform"]["phone"].value;
+     		var email=document.forms["myform"]["email"].value;
+     	// 	var phonecheck=	/^{0,1}[6-9]{1}[0-9]{9}{0,1}$/;
+     	// 	var result=phonecheck.test(phone);
+   			// if(result==true)
+   			// {
+   			// 	alert("checkkk");
+   			// 	return false;
+   			//}
+     		if(user.length<4)
+     		{
+     			alert("Username must be atleast 4!");
+     			return false;
+     		 }
+     		if(pass.length<8)
+     		{
+     			alert("Password must be atleast 8 characters!");
+     			return false;
+     		}
+     		 // var i,len=pass.length,c1=0;
+     		 // for(i=0;i<len;i++)
+     		 // {
+     		 // 	if(pass.charAt(i)>0 && pass.charAt(i)<9)
+     		 // 		c1=c1+1;
+     		 // }
+     		 // if(c1==0)
+     		 // {
+     		 // 	alert("Password must have atleast 1 digits!");
+     			// return false;
+     		 // }
+
+     		 //mandatory @.... @ at begin....dot only after @... dot shouldnot be at end...
+     		 var atposition=email.indexOf("@");  
+			 var dotposition=email.lastIndexOf(".");  
+			if (atposition<1 || dotposition<atposition+2 || dotposition+2>=email.length){  
+  			alert("Please enter a valid e-mail address");  
+  			return false;  
+  				} 
+     		 var upperCaseLetters = /[A-Z]/g;
+	 		 if(pass.match(upperCaseLetters)) {  
+	    		
+	  		} else {
+	    		alert("Your Password must contain atleast one Capital letter!!");
+	    		return false;
+	  				}
+	  		var numbers= /[0-9]/g;
+	  		if(pass.match(numbers)){
+
+	  		}
+	  		else
+	  		{
+	  			alert("Your Password must contain atleast one number!!");
+	    		return false;
+	  		}
+	  		var special=/[^a-zA-Z\d]/g;
+	  		if(pass.match(special))
+	  		{
+
+	  		}
+	  		else
+	  		{
+	  			alert("Your Password must contain atleast one special char!!");
+	    		return false;
+	  		}
+     	
+
+     		// if(pass.charAt(0)==97)
+     		// {
+     		// 	alert("Incorrect passs");
+     		// 	return false;
+     		// }
+     		var upperCaseLetters = /[A-Z]/g;
+     		var lowercase= /[a-z]/g;
+     		var special=/[^a-zA-Z\d]/g;
+     		if(phone.match(special))
+     		{
+     			alert("phone cant contain spl chars");
+     			return false;
+     		}
+     		if(phone.match(upperCaseLetters)|| phone.match(lowercase))
+     		{
+     			alert("Phone number cant contain letters!");
+     			return false;
+     		}
+     		if(phone.length<10)
+     		{
+     			alert("Please enter correct phone number! It is less than 10 digits..");
+     			return false;
+     		}
+     		if(phone.length>10)
+     		{
+     			alert("Please enter correct phone number! It is more than 10 digits..");
+     			return false;
+     		}
+     		if(phone.charAt(0)>=1 && phone.charAt(0)<7 )
+     		{
+     			alert("Phone number not valid! Please start number with 7 or 8 or 9 ");
+     			return false;
+     		}
+
+     	}
+     </script>
+   </head>
+<body>
+<div class="container">
+	<img src="img/logo.PNG" style="margin-left: 2px; margin-top: 2px;" width="10%" height="12%">
+	<p align="center" style="margin-top: -70px; font-size: 30px; color: white;"><b>JAI KISAN<br><span style="font-size: 22px;">Making farming great again..!!</b></span></p>
+</div>  
+<div class="cont">
+	<p align="center" style="font-size: 18px;"><b><a href="index.html" style="color:black;text-decoration-line: none;">Home</a>  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <a href="schemes.html" style="color:black;text-decoration-line: none;">Schemes</a> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  <a href="msp.html" style="color:black;text-decoration-line: none;">Minimum Sale Price</a> &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp <a href="contact.html" style="color:black;text-decoration-line: none;">Contact</a> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <a href="shc.html" style="color:black;text-decoration-line: none;">Soil Health Card</a> &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp <a href="login.html" style="color:black;text-decoration-line: none;">Login</a> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <a href="register.html" style="color:black;text-decoration-line: none;">Register</a> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <a href="aboutus.html" style="color:black;text-decoration-line: none;">About Us</a> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <a href="contactus.html" style="color:black;text-decoration-line: none;">Contact Us</a>&nbsp &nbsp &nbsp &nbsp &nbsp <button onclick="goBack()" class="button">Go Back</button></b></p>	
+</div>
+<!-- <img src="img/farmer-bn.jpg" style="height: 75%;width: 100%"> -->
+<p style="text-align: center;color: red;font-size: 25px"><b><u>Register</u></b></p>
+<p style="margin-left:600px;font-size: 20px"><b>Select</b> <input type="radio" name="Select" style="margin-left: 50px">Farmer<input type="radio" name="Select" style="margin-left: 50px">Agent</p>
+<br>
+<form name="myform" action="login.html" method="post" onsubmit="return myvalidate()">
+	<table border="2" bgcolor="white" bordercolor="green" cellspacing="2" cellpadding="2" bgcolor="white" width="400px"  height="300px" align="center">
+			<tr>
+				<th>Username: </td>
+				<th><input type="text" name="name1" id="name1" placeholder="min 4 letters" required></td>
+			</tr>
+			<tr>
+				<th>Email:</td>
+				<th><input type="text" name="email" placeholder="include @gmail.com" required></td>
+			</tr>
+			<tr>
+				<th>Password:</td>
+				<th><input type="Password" name="pass" placeholder="atleast 1 Capital letter,1 number and 1 specialchar" required></td>
+			</tr>
+			<tr>
+				<th>Village:</td>
+				<th><input type="text" name="name2" required></td>
+			</tr>
+			<tr>
+				<th>District:</td>
+				<th><input type="text" name="name3" required></td>
+			</tr>
+			<tr>
+				<th>Phone:</td>
+				<th><input type="text" name="phone"  required></td>
+			</tr>
+			
+
+	</table>
+	<br>
+	<div align="center">
+	<input style="font-size: 15px" type="submit" name="Sub">
+	<input  style="font-size: 15px" type="reset" name="Sub1">
+    </div>
+</form>
+<br>
+<br>
+<br>
+<hr>
+<marquee style="font-size: 20px"><b>Top Stories:: JAI KISAN is shaping into new standards of life for farmers.</b></marquee>
+<hr>
+<a href="facebook.com"><img src="img/fb.jpg" style="height: 10%;width:10%; margin-left: 25%;"></a>
+<a href="gmail.com"><img src="img/gmail.png" style="height: 10%;width:5%; margin-left: 180px;"></a>
+<a href="twitter"><img src="img/twitter.png" style="height: 10%;width:5%; margin-left: 220px;"></a>
+<hr>
+<script type="text/javascript">
+	function goBack() {
+  window.history.back();
+}
+</script>
+<footer class="foo">
+	<p style="margin-left: 50px;"> &copy RGUKT BASAR <SPAN style="margin-left: 1020px;">Developed by: E3-CSE</SPAN></p>
+</footer>
+</body>
+</html>

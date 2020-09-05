@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+ <style>
+body {
+  background-image: url('p1.jpg');
+  background-repeat: no-repeat;
+}
+</style> 
+<head>
+	<link rel="shortcut icon" href="img/logo.png" />
+        <title>Jai Kisan</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- latest compiled and minified CSS -->
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css">
+        <!-- jquery library -->
+        <script type="text/javascript" src="bootstrap/js/jquery-3.2.1.min.js"></script>
+        <!-- Latest compiled and minified javascript -->
+        <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+        <!-- External CSS -->
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+    </head>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+               <div class="container">
+                   <div class="navbar-header">
+                       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                           <span class="icon-bar"></span>
+                           <span class="icon-bar"></span>
+                           <span class="icon-bar"></span>
+                       </button>
+                       <a href="index.php" class="navbar-brand">Jai Kisan
+                       </a></div>
+                   <div class="collapse navbar-collapse" id="myNavbar">
+                       <ul class="nav navbar-nav navbar-right">
+                           <?php
+                           if(isset($_SESSION['email'])){
+                           ?>
+                           <a href="index.php" class="navbar-brand"><span class="glyphicon glyphicon-home"> Home</a>
+                          
+                           <li><a href="settings.php"><span class="glyphicon glyphicon-cog"></span> Settings</a></li>
+                           <li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+                           <li><a href="cart.php"><span class="glyphicon glyphicon-shopping-cart"></span> cart</a></li>
+                           
+                           <li><a href=""><span class="glyphicon glyphicon-log-out"></span>Contact </a></li>
+                           <?php
+                           }else{
+                            ?>
+                            <a href="index.php" class="navbar-brand"><span class="glyphicon glyphicon-home"></span> Home</a>
+                            <li><a href="signup.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                           <li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                           <li><a href=""><span class="glyphicon glyphicon-user"></span>   About Us</a></li>
+                           <li><a href=""><span class="glyphicon glyphicon-log-in"></span> Contact </a></li>
+                           <?php
+                           }
+                           ?>
+                           
+                       </ul>
+                   </div>
+               </div>
+</nav>
+<br><br><br><br>
+</head>
+<body><font size="5">
+	<h1 style="color: blue;text-align: center">Animal Husbandry</h1>
+	<br>    Animal husbandry is the science of farming of animal livestock. It includes caring, breeding and management of livestock. Animal husbandry is a large scale business where animals that provide us food are reared, bred, sheltered and cared in a farm or regions which are specially built for them.<br><br>
+
+      Animal husbandry is the branch of agriculture and organic farming concerned with
+ the management, raise and care of farm animals by humans. It is initiated with cattle farming livestock such as cows, goats, buffalo, sheep, etc. are reared. Later, animal husbandry was extended to cattle farming, poultry farming, productions of egg and broiler, apiculture, fisheries, etc.
+<br>
+<h2 style="color: blue;">Advantages</h2>
+1. Animal husbandry helps us in providing proper feed, proper shelter and protection against diseases to the domestic animals. Thus, animal husbandry helps in proper management of the domestic animals.<br><br>
+
+2. Animal husbandry helps us in developing high yielding breeds of various domestic animals through cross breeding. Thus, animal husbandry increases the availability of various food products such as milk, eggs and meat, which are obtained from domestic animals.<br><br>
+
+3. Animal husbandry helps in raising the living standard of farmers. As a result of higher production of animal products, the income of farmers increases.<br><br>
+
+
+4. Animal husbandry helps in systematic disposal of animal wastes. Thus, it helps in maintaining healthy environment.</font>
+</body>
+<footer class="footer">
+               <div class="container">
+                <center>
+                   <p>Copyright &copy <a href="">Jai Kisan</a>  All Rights Reserved.</p>
+                   
+               </center>
+               </div>
+           </footer>
+</html>
